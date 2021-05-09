@@ -1,4 +1,4 @@
-package com.ClaVis.clavis;
+package com.ClaVis.clavis.fracments;
 
 import android.os.Bundle;
 
@@ -8,14 +8,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
+import com.ClaVis.clavis.MainActivity;
+import com.ClaVis.clavis.R;
 import com.ClaVis.clavis.adpters.RecyclerViewAdapter;
 
 
 public class Activity2_2fragment extends Fragment {
     private RecyclerView recyclerView1;
+    private Integer[] id = {R.id.action_activity2_2fragment_to_bazizucMenuFragment, R.id.action_activity2_2fragment_to_nots_and_tabsFragment,
+    R.id.action_activity2_2fragment_to_practic_nots_Fragment};
+    private String[] name = {"Базовое изучение", "Ноты и табы", "Практика"};
 
 
     @Override
@@ -24,10 +27,13 @@ public class Activity2_2fragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_activity2_2fragment, container, false);
         recyclerView1 = v.findViewById(R.id.rv);
-        recyclerView1.setAdapter(new RecyclerViewAdapter(getActivity()));
+        recyclerView1.setAdapter(new RecyclerViewAdapter(getActivity(), this, id, name));
+
 
         return v;
+
     }
+
 
     public static Activity2_2fragment getInstance(String s){
         Activity2_2fragment fragment = new Activity2_2fragment();

@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2_2fragment"
-    android:background="@color/golubajaustisa">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fracments.Activity2_2fragment"
+    android:background="@color/blue2">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </FrameLayout>

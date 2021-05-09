@@ -12,26 +12,38 @@
         android:id="@+id/fontop"
         layout="@layout/tollbar" />
 
-
-    <FrameLayout
+    <androidx.fragment.app.FragmentContainerView
+        app:defaultNavHost="true"
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="00dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp"
-        android:id="@+id/fl_menukama"/>
+        app:layout_constraintTop_toBottomOf="@+id/fontop"
+        app:navGraph="@navigation/nav_graf" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationViewSyn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        app:itemBackground="@color/golubajaustisa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/botton_menu_navigtion" />
+<!--&lt;!&ndash;&lt;!&ndash;    <com.google.android.material.appbar.AppBarLayout&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:id="@+id/appBarLayout"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/fontop">&ndash;&gt;&ndash;&gt;-->
 
+<!--&lt;!&ndash;&lt;!&ndash;        <com.google.android.material.tabs.TabLayout&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            android:id="@+id/tabs"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            android:background="@color/golubajaustisa" />&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </com.google.android.material.appbar.AppBarLayout>&ndash;&gt;&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <androidx.viewpager.widget.ViewPager&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/pager"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">&ndash;&gt;-->
+
+
+<!--    </androidx.viewpager.widget.ViewPager>-->
 
 
 
